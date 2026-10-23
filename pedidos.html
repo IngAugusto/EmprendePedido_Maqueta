@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmprendePedido – Pedidos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <a href="pedidos.html" class="logo">Emprende<span>Pedido</span></a>
+    <button class="menu-toggle" aria-label="Abrir menú" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
+    <nav class="nav" aria-label="Principal">
+      <a href="clientes.html">Clientes</a>
+      <a href="productos.html">Productos</a>
+      <a href="pedidos.html" class="active">Pedidos</a>
+      <a href="index.html">Salir</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="page-title">
+      <span>Pedidos</span>
+      <a href="pedido-nuevo.html" class="btn btn-primary">+ Nuevo pedido</a>
+    </div>
+
+    <div class="filters">
+      <div class="form-group">
+        <label for="filtroEstado">Estado</label>
+        <select id="filtroEstado">
+          <option value="">Todos</option>
+          <option>Recibido</option>
+          <option>En preparación</option>
+          <option>Entregado</option>
+          <option>Cancelado</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="filtroFecha">Fecha entrega</label>
+        <input type="date" id="filtroFecha">
+      </div>
+      <div class="form-group">
+        <label for="buscar">Buscar cliente</label>
+        <input type="search" id="buscar" placeholder="Nombre o teléfono">
+      </div>
+    </div>
+
+    <table class="data-table" role="table">
+      <thead>
+        <tr>
+          <th scope="col">N.º</th>
+          <th scope="col">Cliente</th>
+          <th scope="col">Fecha entrega</th>
+          <th scope="col">Estado</th>
+          <th scope="col">Total</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>#1042</td>
+          <td>María López</td>
+          <td>22/10/2026</td>
+          <td><span class="badge badge-preparacion">En preparación</span></td>
+          <td>$85.000</td>
+          <td class="actions"><a href="pedido-detalle.html" class="btn btn-secondary btn-sm">Ver</a></td>
+        </tr>
+        <tr>
+          <td>#1041</td>
+          <td>Carlos Ruiz</td>
+          <td>21/10/2026</td>
+          <td><span class="badge badge-recibido">Recibido</span></td>
+          <td>$42.000</td>
+          <td class="actions"><a href="pedido-detalle.html" class="btn btn-secondary btn-sm">Ver</a></td>
+        </tr>
+        <tr>
+          <td>#1040</td>
+          <td>Ana Gómez</td>
+          <td>20/10/2026</td>
+          <td><span class="badge badge-entregado">Entregado</span></td>
+          <td>$120.000</td>
+          <td class="actions"><a href="pedido-detalle.html" class="btn btn-secondary btn-sm">Ver</a></td>
+        </tr>
+        <tr>
+          <td>#1039</td>
+          <td>Pedro Sánchez</td>
+          <td>19/10/2026</td>
+          <td><span class="badge badge-cancelado">Cancelado</span></td>
+          <td>$35.000</td>
+          <td class="actions"><a href="pedido-detalle.html" class="btn btn-secondary btn-sm">Ver</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

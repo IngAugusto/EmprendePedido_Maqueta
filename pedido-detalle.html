@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmprendePedido – Detalle pedido #1042</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <a href="pedidos.html" class="logo">Emprende<span>Pedido</span></a>
+    <button class="menu-toggle" aria-label="Abrir menú" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
+    <nav class="nav" aria-label="Principal">
+      <a href="clientes.html">Clientes</a>
+      <a href="productos.html">Productos</a>
+      <a href="pedidos.html" class="active">Pedidos</a>
+      <a href="index.html">Salir</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="page-title">
+      <span>Pedido #1042</span>
+      <span class="badge badge-preparacion">En preparación</span>
+    </div>
+    <div class="form-card wide">
+      <div class="info-grid">
+        <div class="info-item">
+          <label>Cliente</label>
+          <div class="value">María López</div>
+        </div>
+        <div class="info-item">
+          <label>Teléfono</label>
+          <div class="value">300 123 4567</div>
+        </div>
+        <div class="info-item">
+          <label>Fecha registro</label>
+          <div class="value">18/10/2026 14:30</div>
+        </div>
+        <div class="info-item">
+          <label>Fecha entrega</label>
+          <div class="value">22/10/2026 16:00</div>
+        </div>
+        <div class="info-item">
+          <label>Método de pago</label>
+          <div class="value">Nequi</div>
+        </div>
+        <div class="info-item">
+          <label>Dirección</label>
+          <div class="value">Calle 10 #5-20</div>
+        </div>
+      </div>
+
+      <h2 class="section-title">Productos</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Cant.</th>
+            <th>P. unit.</th>
+            <th>Subtotal</th>
+            <th>Personalización</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cupcake Vainilla</td>
+            <td>12</td>
+            <td>$3.500</td>
+            <td>$42.000</td>
+            <td>Masa: Vainilla · Frosting: Buttercream · Msg: "¡Feliz Cumpleaños!" · +$5.000</td>
+          </tr>
+          <tr>
+            <td>Cupcake Chocolate</td>
+            <td>6</td>
+            <td>$3.800</td>
+            <td>$22.800</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="total-box">
+        <span>Total del pedido</span>
+        <span>$69.800</span>
+      </div>
+
+      <div class="form-actions">
+        <a href="pedido-nuevo.html" class="btn btn-primary">Editar</a>
+        <button type="button" class="btn btn-secondary" onclick="alert('Estado actualizado (simulación)')">Cambiar estado</button>
+        <button type="button" class="btn btn-danger" onclick="if(confirm('¿Cancelar este pedido? Esta acción no se puede deshacer.')) alert('Pedido cancelado (simulación)')">Cancelar pedido</button>
+        <a href="pedidos.html" class="btn btn-secondary">Volver</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

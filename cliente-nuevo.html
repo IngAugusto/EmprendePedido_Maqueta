@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmprendePedido – Nuevo cliente</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <a href="pedidos.html" class="logo">Emprende<span>Pedido</span></a>
+    <button class="menu-toggle" aria-label="Abrir menú" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
+    <nav class="nav" aria-label="Principal">
+      <a href="clientes.html" class="active">Clientes</a>
+      <a href="productos.html">Productos</a>
+      <a href="pedidos.html">Pedidos</a>
+      <a href="index.html">Salir</a>
+    </nav>
+  </header>
+  <main class="main">
+    <h1 class="page-title">Nuevo cliente</h1>
+    <div class="form-card">
+      <form action="clientes.html" method="get" id="formCliente">
+        <div class="form-group">
+          <label for="nombres">Nombres <span class="req">*</span></label>
+          <input type="text" id="nombres" name="nombres" required autocomplete="given-name">
+        </div>
+        <div class="form-group">
+          <label for="apellidos">Apellidos <span class="req">*</span></label>
+          <input type="text" id="apellidos" name="apellidos" required autocomplete="family-name">
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono <span class="req">*</span></label>
+          <input type="tel" id="telefono" name="telefono" required autocomplete="tel" placeholder="300 123 4567">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="correo@ejemplo.com">
+        </div>
+        <div class="form-group">
+          <label for="direccion">Dirección de entrega</label>
+          <input type="text" id="direccion" name="direccion" autocomplete="street-address" placeholder="Calle, número, barrio…">
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Guardar</button>
+          <a href="clientes.html" class="btn btn-secondary">Cancelar</a>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

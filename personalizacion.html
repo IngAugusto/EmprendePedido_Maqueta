@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmprendePedido – Personalización</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <a href="pedidos.html" class="logo">Emprende<span>Pedido</span></a>
+    <button class="menu-toggle" aria-label="Abrir menú" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
+    <nav class="nav" aria-label="Principal">
+      <a href="clientes.html">Clientes</a>
+      <a href="productos.html">Productos</a>
+      <a href="pedidos.html" class="active">Pedidos</a>
+      <a href="index.html">Salir</a>
+    </nav>
+  </header>
+  <main class="main">
+    <h1 class="page-title">Personalización</h1>
+    <p class="subtitle">Cupcake Vainilla · Cantidad: 12</p>
+    <div class="form-card">
+      <form action="pedido-nuevo.html" method="get">
+        <div class="form-group">
+          <label for="saborMasa">Sabor de masa</label>
+          <select id="saborMasa">
+            <option value="">Sin preferencia</option>
+            <option selected>Vainilla</option>
+            <option>Chocolate</option>
+            <option>Red Velvet</option>
+            <option>Zanahoria</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="frosting">Tipo de frosting</label>
+          <select id="frosting">
+            <option value="">Sin preferencia</option>
+            <option selected>Buttercream</option>
+            <option>Merengue</option>
+            <option>Queso crema</option>
+            <option>Ganache</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="relleno">Sabor de relleno</label>
+          <select id="relleno">
+            <option value="">Sin relleno</option>
+            <option>Nutella</option>
+            <option>Arequipe</option>
+            <option>Frutos rojos</option>
+            <option>Dulce de leche</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje decorativo</label>
+          <input type="text" id="mensaje" value="¡Feliz Cumpleaños María!" maxlength="100">
+        </div>
+        <div class="form-group">
+          <label for="costo">Costo adicional ($)</label>
+          <input type="number" id="costo" min="0" step="500" value="5000" required>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Guardar personalización</button>
+          <a href="pedido-nuevo.html" class="btn btn-secondary">Cancelar</a>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

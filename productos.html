@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmprendePedido – Productos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <a href="pedidos.html" class="logo">Emprende<span>Pedido</span></a>
+    <button class="menu-toggle" aria-label="Abrir menú" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
+    <nav class="nav" aria-label="Principal">
+      <a href="clientes.html">Clientes</a>
+      <a href="productos.html" class="active">Productos</a>
+      <a href="pedidos.html">Pedidos</a>
+      <a href="index.html">Salir</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="page-title">
+      <span>Productos</span>
+      <a href="#" class="btn btn-primary">+ Nuevo producto</a>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Categoría</th>
+          <th scope="col">Precio base</th>
+          <th scope="col">Estado</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cupcake Vainilla</td>
+          <td>Cupcakes Clásicos</td>
+          <td>$3.500</td>
+          <td><span class="badge badge-activo">Activo</span></td>
+          <td><a href="#" class="btn btn-secondary btn-sm">Editar</a></td>
+        </tr>
+        <tr>
+          <td>Cupcake Chocolate</td>
+          <td>Cupcakes Clásicos</td>
+          <td>$3.800</td>
+          <td><span class="badge badge-activo">Activo</span></td>
+          <td><a href="#" class="btn btn-secondary btn-sm">Editar</a></td>
+        </tr>
+        <tr>
+          <td>Cupcake Red Velvet</td>
+          <td>Cupcakes Temáticos</td>
+          <td>$4.200</td>
+          <td><span class="badge badge-activo">Activo</span></td>
+          <td><a href="#" class="btn btn-secondary btn-sm">Editar</a></td>
+        </tr>
+        <tr>
+          <td>Galleta Decorada</td>
+          <td>Galletas</td>
+          <td>$2.500</td>
+          <td><span class="badge badge-inactivo">Inactivo</span></td>
+          <td><a href="#" class="btn btn-secondary btn-sm">Editar</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

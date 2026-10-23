@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmprendePedido – Clientes</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <a href="pedidos.html" class="logo">Emprende<span>Pedido</span></a>
+    <button class="menu-toggle" aria-label="Abrir menú" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
+    <nav class="nav" aria-label="Principal">
+      <a href="clientes.html" class="active">Clientes</a>
+      <a href="productos.html">Productos</a>
+      <a href="pedidos.html">Pedidos</a>
+      <a href="index.html">Salir</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="page-title">
+      <span>Clientes</span>
+      <a href="cliente-nuevo.html" class="btn btn-primary">+ Nuevo cliente</a>
+    </div>
+    <div class="filters">
+      <div class="form-group">
+        <label for="buscar">Buscar</label>
+        <input type="search" id="buscar" placeholder="Nombre o teléfono…">
+      </div>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Teléfono</th>
+          <th scope="col">Email</th>
+          <th scope="col">Dirección</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>María López</td>
+          <td>300 123 4567</td>
+          <td>maria@email.com</td>
+          <td>Calle 10 #5-20</td>
+          <td><a href="#" class="btn btn-secondary btn-sm">Editar</a></td>
+        </tr>
+        <tr>
+          <td>Carlos Ruiz</td>
+          <td>310 987 6543</td>
+          <td>carlos@email.com</td>
+          <td>Carrera 15 #8-45</td>
+          <td><a href="#" class="btn btn-secondary btn-sm">Editar</a></td>
+        </tr>
+        <tr>
+          <td>Ana Gómez</td>
+          <td>320 555 1234</td>
+          <td>—</td>
+          <td>Av. 30 #12-08</td>
+          <td><a href="#" class="btn btn-secondary btn-sm">Editar</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

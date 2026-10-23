@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmprendePedido – Nuevo pedido</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <a href="pedidos.html" class="logo">Emprende<span>Pedido</span></a>
+    <button class="menu-toggle" aria-label="Abrir menú" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
+    <nav class="nav" aria-label="Principal">
+      <a href="clientes.html">Clientes</a>
+      <a href="productos.html">Productos</a>
+      <a href="pedidos.html" class="active">Pedidos</a>
+      <a href="index.html">Salir</a>
+    </nav>
+  </header>
+  <main class="main">
+    <h1 class="page-title">Nuevo pedido</h1>
+    <div class="form-card wide">
+      <form action="pedidos.html" method="get">
+        <div class="form-group">
+          <label for="cliente">Cliente <span class="req">*</span></label>
+          <select id="cliente" required>
+            <option value="">Seleccionar cliente…</option>
+            <option>María López</option>
+            <option>Carlos Ruiz</option>
+            <option>Ana Gómez</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fechaEntrega">Fecha de entrega <span class="req">*</span></label>
+            <input type="datetime-local" id="fechaEntrega" required>
+          </div>
+          <div class="form-group">
+            <label for="metodoPago">Método de pago <span class="req">*</span></label>
+            <select id="metodoPago" required>
+              <option value="">Seleccionar…</option>
+              <option>Efectivo</option>
+              <option>Transferencia</option>
+              <option>Nequi</option>
+              <option>Tarjeta</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="estado">Estado</label>
+          <select id="estado">
+            <option>Recibido</option>
+            <option>En preparación</option>
+            <option>Entregado</option>
+            <option>Cancelado</option>
+          </select>
+        </div>
+
+        <h2 class="section-title">Productos del pedido</h2>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Cant.</th>
+              <th>P. unit.</th>
+              <th>Subtotal</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cupcake Vainilla</td>
+              <td>12</td>
+              <td>$3.500</td>
+              <td>$42.000</td>
+              <td><a href="personalizacion.html" class="btn btn-secondary btn-sm">Personalizar</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="margin-top:0.75rem"><button type="button" class="btn btn-secondary btn-sm">+ Agregar producto</button></p>
+
+        <div class="total-box">
+          <span>Total del pedido</span>
+          <span>$42.000</span>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Guardar pedido</button>
+          <a href="pedidos.html" class="btn btn-secondary">Cancelar</a>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
